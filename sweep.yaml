@@ -1,0 +1,15 @@
+method: random  # random search over hyperparameter space
+metric:
+  name: val_loss
+  goal: minimize
+parameters:
+  learning_rate:
+    values: [0.0001, 0.0003, 0.001, 0.003]
+  batch_size:
+    values: [32, 64, 128]
+  NF:
+    values: [8, 16, 32]
+  kernel_size:
+    values: [3, 5]
+  optimizer:
+    values: ["adam", "sgd"]
